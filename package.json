@@ -9,7 +9,7 @@
     "start": "node src/server.mjs",
     "migrate": "prisma migrate dev",
     "generate": "prisma generate",
-    "build": "npm run generate && npm run migrate"
+    "build": "npm run generate && npm run migrate && node src/server.mjs"
   },
   "repository": {
     "type": "git",
