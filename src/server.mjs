@@ -15,6 +15,10 @@ app.use("/api/appointments", appointmentRoutes);
 
 app.use("/", (req, res) => res.send("Hello World!"));
 
+app.use((req, res, next) => {
+  res.status(404).json({ message: "Route not Found" });
+});
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
