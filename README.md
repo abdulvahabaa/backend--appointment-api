@@ -4,8 +4,8 @@ This is a backend for an appointment slot booking system.
 
   <div>
     <img src="https://img.shields.io/badge/-Node_JS-black?style=for-the-badge&logoColor=black&logo=node.js&color=green" alt="node.js" />
-    <img src="https://img.shields.io/badge/-Appwrite-black?style=for-the-badge&logoColor=white&logo=appwrite&color=FD366E" alt="appwrite" />
-    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
+    <img src="https://img.shields.io/badge/-postgresql-black?style=for-the-badge&logoColor=white&logo=postgresql&color=06B6D4" alt="appwrite" />
+    <img src="https://img.shields.io/badge/-prisma-black?style=for-the-badge&logoColor=white&logo=prisma&color=gray" alt="tailwindcss" />
   </div>
 
 ## 📋 <a name="table">Table of Contents</a>
@@ -55,6 +55,7 @@ Install the project dependencies using npm:
 npm install
 ```
 
+
 **Set Up Environment Variables**
 
 Create a new file named `.env` in the root of your project and add the following content:
@@ -66,6 +67,23 @@ DATABASE_URL=<DATABASE_URL>
 ```
 
 or Rename the `.env.Sample` file to `.env` 
+
+
+**Database Migration**
+
+```bash
+npm run migrate 
+```
+
+This will migrate the database schema to the latest version.
+
+**Generate Prisma Client**
+
+```bash
+npm run generate
+```
+
+This will generate a Prisma client based on the database schema.
 
 **Running the Project**
 
@@ -90,7 +108,7 @@ The API expects JSON data in the request body and returns JSON data in the respo
 
 base url: http://localhost:9002
 
-1. **GET /api/appointments/available-slots?date=<yyyy-mm-dd>**
+1. **GET /api/appointments/available-slots?date= < yyyy-mm-dd >**
 
 This endpoint returns all available slots for a given date.
 
