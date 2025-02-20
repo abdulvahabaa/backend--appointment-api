@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "src/server.mjs",
+            "use": "@vercel/node",
+            "config": { "includeFiles": ["src/**","prisma/**"] }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "src/server.mjs"
+        }
+    ]
+}
