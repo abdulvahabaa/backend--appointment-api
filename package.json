@@ -1,0 +1,36 @@
+{
+  "name": "backend--appointment-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.mjs",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.mjs",
+    "start": "node src/server.js",
+    "migrate": "prisma migrate dev",
+    "generate": "prisma generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulvahabaa/backend--appointment-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdulvahabaa/backend--appointment-api/issues"
+  },
+  "homepage": "https://github.com/abdulvahabaa/backend--appointment-api#readme",
+  "dependencies": {
+    "@prisma/client": "^6.4.0",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.3",
+    "prisma": "^6.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
